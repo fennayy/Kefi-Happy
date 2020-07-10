@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="KEFI: Choose happy.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="indexStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/188b884765.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">
+                    <img class="logo" src="./images/Logo/Full Spaced out logo Asset 20.png" alt="KEFI Logo" />
+                </a>
+                <a href="Contact.html">CONTACT</a>
+                <a href="Blogs.html">BLOGS</a>
+                <a href="Quotes.html">QUOTES</a>
+                <a href="About.html">ABOUT KEFI</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <!--Javascript for responsive topnav-->
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <main>
+        <div class="container">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img src="./images/Home-ss/1_Fotor.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="./images/Home-ss/2_Fotor.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="./images/Home-ss/BIG_Fotor!.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="./images/Home-ss/4_Fotor.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="./images/Home-ss/5_Fotor.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="./images/Home-ss/6_Fotor.jpg" style="width:100%">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="./images/Home/1.JPEG" style="width:100%" onclick="currentSlide(1)" alt="Our Motto">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/Home/2.JPEG" style="width:100%" onclick="currentSlide(2)" alt="Choose to be happy with us">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/Home/BIG.png" style="width:100%" onclick="currentSlide(3)" alt="Kefi:Meaning">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/Home/4.JPEG" style="width:100%" onclick="currentSlide(4)" alt="Quotes to lift your mood">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/Home/5.JPG" style="width:100%" onclick="currentSlide(5)" alt="More Quotes">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/Home/6.JPEG" style="width:100%" onclick="currentSlide(6)" alt="At Kefi we believe in ourselves.">
+            </div>
+            </div>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+        <div class="background">
+            <h1>Helping you on your journey to Happiness!</h1>
+        </div>
+        </main>
+        <footer>
+            <p>Authors: Anushka Sinha & Fenny Keniya</p>
+            <p><a href="mailto:kefichoosehappy@gmail.com">kefichoosehappy@gmail.com</a></p>
+        </footer>
+    </body>
+</html>

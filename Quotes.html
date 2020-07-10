@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="KEFI: Choose happy.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="quotesStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/188b884765.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">
+                    <img class="logo" src="./images/Logo/Full Spaced out logo Asset 20.png" alt="KEFI Logo" />
+                </a>
+                <a href="Contact.html">CONTACT</a>
+                <a href="Blogs.html">BLOGS</a>
+                <a href="Quotes.html">QUOTES</a>
+                <a href="About.html">ABOUT KEFI</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <!--Javascript for responsive topnav-->
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <main>
+            <div class="header" id="myHeader">
+                <h1>Quotes</h1>
+                <p class="quote-text">Quotes help us stay positive, happy and motivated. Here are a few curated by Kefi just for you.</p>
+                <p style="font-family: lato; color: white; margin-bottom: 15px;">Click on the buttons to change the grid view.</p>
+                <button class="btn" onclick="one()">1</button>
+                <button class="btn active" onclick="two()">2</button>
+                <button class="btn" onclick="four()">4</button>
+            </div>
+            <!--Scroll to top button-->
+            <a href="Quotes.html" >
+                <button id="myBtn"><i class="fa fa-2x fa-angle-up"></i></button>
+            </a>
+            <!-- Photo Grid -->
+            <div class="row"> 
+                <div class="column">
+                    <img src="./images/Quotes/1.JPEG" style="width:100%">
+                    <img src="./images/Quotes/2.JPEG" style="width:100%">
+                    <img src="./images/Quotes/3.JPEG" style="width:100%">
+                    <img src="./images/Quotes/4.JPG" style="width:100%">
+                    <img src="./images/Quotes/5.JPG" style="width:100%">
+                    <img src="./images/Quotes/6.JPEG" style="width:100%">
+                    <img src="./images/Quotes/7.JPG" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="./images/Quotes/8.JPG" style="width:100%">
+                    <img src="./images/Quotes/9.JPEG" style="width:100%">
+                    <img src="./images/Quotes/10.JPG" style="width:100%">
+                    <img src="./images/Quotes/29.JPEG" style="width:100%">
+                    <img src="./images/Quotes/12.JPG" style="width:100%">
+                    <img src="./images/Quotes/13.JPEG" style="width:100%">
+                    <img src="./images/Quotes/14.JPG" style="width:100%">
+                </div>  
+                <div class="column">
+                    <img src="./images/Quotes/15.JPG" style="width:100%">
+                    <img src="./images/Quotes/30.JPG" style="width:100%">
+                    <img src="./images/Quotes/17.JPEG" style="width:100%">
+                    <img src="./images/Quotes/18.JPG" style="width:100%">
+                    <img src="./images/Quotes/19.JPG" style="width:100%">
+                    <img src="./images/Quotes/20.JPG" style="width:100%">
+                    <img src="./images/Quotes/21.JPG" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="./images/Quotes/22.JPG" style="width:100%">
+                    <img src="./images/Quotes/23.JPEG" style="width:100%">
+                    <img src="./images/Quotes/24.JPEG" style="width:100%">
+                    <img src="./images/Quotes/25.JPG" style="width:100%">
+                    <img src="./images/Quotes/26.JPG" style="width:100%">
+                    <img src="./images/Quotes/27.JPEG" style="width:100%">
+                    <img src="./images/Quotes/28.JPG" style="width:100%">
+                </div>
+            </div>
+            <script>
+            // Get the elements with class="column"
+            var elements = document.getElementsByClassName("column");
+            // Declare a loop variable
+            var i;
+            // Full-width images
+            function one() {
+                for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+                }
+            }
+            // Two images side by side
+            function two() {
+                for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "50%";  // IE10
+                elements[i].style.flex = "50%";
+                }
+            }
+            // Four images side by side
+            function four() {
+                for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "25%";  // IE10
+                elements[i].style.flex = "25%";
+                }
+            }
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("myHeader");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+            </script>
+        </main>
+        <footer>
+            <p>Authors: Anushka Sinha & Fenny Keniya</p>
+            <p><a href="mailto:kefichoosehappy@gmail.com">kefichoosehappy@gmail.com</a></p>
+        </footer>
+    </body>
+</html>

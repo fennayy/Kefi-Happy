@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height:100%;
+    overflow:auto;
+    font-family:'Lato', sans-serif;
+    color: black;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: url(./images/kefi-bg1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+main{
+    flex: 1;
+    margin:50px;
+}
+
+a,button,.logo{
+    cursor:pointer;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: black;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 5px;
+}
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.topnav a:not(:first-child){
+    float:right;
+}
+
+.topnav a:hover {
+    color:white;
+}
+
+footer {
+    display:block;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: pink;
+    font-size: 12px;
+    margin-top: 50px;
+    flex-shrink: 0;
+}  
+
+footer a{
+    text-decoration: none;
+    color: pink;
+}
+
+h1{
+    font-family: 'Sail', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Pacifico', Helvetica,sans-serif;
+    font-size: 25px;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.text{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.picture-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.polaroid{
+    margin: 20px;
+}
+
+.image1{
+    transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    }
+    
+.image2{
+    transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+}
+
+.topnav .icon {
+    display: none;
+  }
+
+.menu{
+    display:none;
+}
+
+/*Mobile Nav*/
+
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .text{
+        font-size: 20px;
+    }
+}

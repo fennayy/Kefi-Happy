@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="KEFI: Choose happy.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="aboutStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/188b884765.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">
+                    <img class="logo" src="./images/Logo/Full Spaced out logo Asset 20.png" alt="KEFI Logo" />
+                </a>
+                <a href="Contact.html">CONTACT</a>
+                <a href="Blogs.html">BLOGS</a>
+                <a href="Quotes.html">QUOTES</a>
+                <a href="About.html">ABOUT KEFI</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <!--Javascript for responsive topnav-->
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <main>
+            <h1>About Kefi</h1>
+            <h3>Hi, this is Fenny and Anushka from Kefi!</h3>
+        	<div class="container">
+				<div class="picture-container">
+                    <img class="polaroid image1" src="./images/fenny.jpeg" alt='Fenny' height="200px" width="200px">
+                    <img class="polaroid image2" src="./images/anushka.jpeg" alt='Anushka' height="200px" width="200px">
+                </div>
+        		<div class="text-container">
+        		    <p class="text">We at Kefi, are on a quest to create optimism in a world surrounded by chaos and negativity.
+        		    We hope Kefi leaves you with a soothing comfort in your heart.
+                    In a world where everyone is fixated at mending imperfections and where only what's wrong stands out, we hope you choose optimism, 
+                    choose positivity, choose happiness by embarking on this journey with us.
+                    </p>
+                    <h3>So let positivity engulf you and give you fireflies of hope, happiness and smiles!</h3>
+    			</div>
+    		</div>
+        </main>
+        <footer>
+            <p>Authors: Anushka Sinha & Fenny Keniya</p>
+            <p><a href="mailto:kefichoosehappy@gmail.com">kefichoosehappy@gmail.com</a></p>
+        </footer>
+    </body>
+</html>
